@@ -1,0 +1,7 @@
+<launch>
+
+  <node name="choreonoid_joy_node" pkg="choreonoid_joy" type="node">
+    <remap from="/joy" to="/choreonoid/joy"/>
+  </node>
+
+</launch>
