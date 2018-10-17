@@ -2,6 +2,7 @@
 #include <sensor_msgs/Joy.h>
 #include <cnoid/Joystick>
 
+#include <iostream>
 using namespace std;
 
 int main(int argc, char **argv)
@@ -21,7 +22,7 @@ int main(int argc, char **argv)
     joystick.sigAxis().connect([&](int, double){ stateChanged = true; });
         
     ros::NodeHandle node;
-    ros::Publisher publisher = node.advertise<sensor_msgs::Joy>("joy", 30);
+    ros::Publisher publisher = node.advertise<sensor_msgs::Joy>("/joy", 30);
 
     ros::Rate loop_rate(60);
 
