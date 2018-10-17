@@ -1,0 +1,12 @@
+<launch>
+
+  <node name="choreonoid_joy_Aizu" pkg="choreonoid_joy" type="node">
+    <remap from="/joy" to="AizuSpider/joy"/>
+  </node>
+
+  <node name="choreonoid_joy_Double" pkg="choreonoid_joy" type="node">
+    <remap from="/joy" to="DoubleArmV7/joy"/>
+  </node>
+
+  
+</launch>
